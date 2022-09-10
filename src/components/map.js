@@ -16,15 +16,19 @@ function Map(){
             setNoiseinfo(res)
         }
         fetchData()
-    }, [location])
+    },[])
 
-    const place = noiseinfo.map(data => data.place)
+    const place = noiseinfo.find(data => {
+        return data.place === location
+    })
 
     let display;
 
-    if (location === place[0]){
+    if (location){
+        var arr = []
+        arr.push(place)
         display = (
-            noiseinfo.map(info => (
+            arr.map(info => (
                 <ul key= {info.pk_track}>
                 <li>
                     <h4>Noiselevel:</h4>
@@ -73,8 +77,15 @@ function Map(){
                     <div className='location'>
                         <h5>Choose location:</h5>
                         <ul>
-                            <button onClick={() => setLocation('Kenya_Nairobi_Dagoretti North')}>Nairobi</button>
-                            <button onClick={() => setLocation('Mombasa')}>Mombasa</button>
+                            <button onClick={() => setLocation('Kenya_Nairobi_Dagoretti North')}>Dagoretti North</button>
+                            <button onClick={() => setLocation('Kenya_Nairobi_Embakasi East')}>Embakasi East</button>
+                            <button onClick={() => setLocation('Kenya_Nairobi_Kibra')}>Kibra</button>
+                            <button onClick={() => setLocation('Kenya_Nairobi_Starehe')}>Starehe</button>
+                            <button onClick={() => setLocation('Kenya_Nairobi_Kasarani')}>Kasarani</button>
+                            <button onClick={() => setLocation('Kenya_Nairobi_Embakasi West')}>Embakasi West</button>
+                            <button onClick={() => setLocation('Kenya_Nairobi_Langata')}>Langata</button>
+                            <button onClick={() => setLocation('Kenya_Nairobi_Roysambu')}>Roysambu</button>
+                            <button onClick={() => setLocation('Kenya_Nairobi_Westlands')}>Westlands</button>
                         </ul>
                     </div>
 
