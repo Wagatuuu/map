@@ -10,6 +10,11 @@
   color: skyblue;
 }
 
+.map{
+  display: flex;
+  justify-content: space-between;
+}
+
 .map .data{
   margin-left: 40px;
   display: flex;
@@ -54,4 +59,9 @@
 
 .raw ul li p{
   margin-left: 20px;
+}
+
+.googlemap{
+  width: 100%;
+  height: 80vh;
 }

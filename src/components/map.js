@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { MapContainer, TileLayer, Marker} from 'react-leaflet';
 
 function Map(){
 
@@ -95,6 +96,23 @@ function Map(){
 
                     </div>
 
+                </div>
+
+                <div className='actualmap'>
+                <MapContainer 
+                    center={[-1.292066, 36.821945]} 
+                    zoom={13} 
+                    scrollWheelZoom={true} 
+                    style={{height: '100vh', width: '100vh'}}
+                >
+                    <TileLayer
+                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    />
+                    <Marker position={[-1.292066, 36.821945]}>
+                        
+                    </Marker>
+                </MapContainer>
                 </div>
                 
             </div>
