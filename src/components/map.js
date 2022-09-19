@@ -1,11 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import { MapContainer, TileLayer, Marker} from 'react-leaflet';
-import {Link} from 'react-router-dom';
+import {Modal} from '@mui/material';
+import Upload from './upload';
 
 function Map(){
 
     const [location, setLocation] = useState('');
     const [noiseinfo, setNoiseinfo] = useState([]);
+    const [open, setOpen] = useState(false);
 
     useEffect(() => {
         async function fetchData(){
@@ -18,11 +20,11 @@ function Map(){
             setNoiseinfo(res)
         }
         fetchData()
-    },[])
+    },[]);
 
     const place = noiseinfo.find(data => {
         return data.place === location
-    })
+    });
 
     let display;
 
@@ -71,9 +73,16 @@ function Map(){
                 <h1>NoiseCapture</h1>
                 <div className='acc'>
                     <h2>Georgeey</h2>
-                    <Link to='/upload' style={{textDecoration: 'none'}}><h3>Upload Data</h3></Link>
+                    <h3 onClick={() => setOpen(!open)}>Upload Data</h3>
                 </div>
             </div>
+
+            <Modal
+                open={open}
+                onClose={() => setOpen(false)}
+            >
+                <Upload />
+            </Modal>
 
             <div className='map'>
                 <div className='data'>

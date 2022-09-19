@@ -94,8 +94,7 @@
   background: white;
   border-radius: 10px;
   box-sizing: border-box;
-  box-shadow: 1px 1px 155px #ddd,
-              -1px -1px 15px #ddd;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .login-container h2 {
