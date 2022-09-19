@@ -1,13 +1,31 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 function Upload(){
+
+    const [userdata, setUserData] = useState({
+        place: '',
+        noiselevel: '',
+        timelength: '',
+        pleasantness: '',
+        noise_type: ''
+    });
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log(userdata)
+        window.location.reload()
+    };
+
     return (
         <div className='login-container'>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className='input-field'>
                         <input 
                             type='text' required
-                            name='place'
+                            value={userdata.place}
+                            onChange={(e) => setUserData(prevState => ({
+                                ...prevState, place: e.target.value
+                            }))}
                         />
                         <span></span>
                         <label>Place</label>
@@ -15,7 +33,10 @@ function Upload(){
                     <div className='input-field'>
                         <input 
                             type='number' required
-                            name='noise-level'
+                            value={userdata.noiselevel}
+                            onChange={(e) => setUserData(prevState => ({
+                                ...prevState, noiselevel: e.target.value
+                            }))}
                         />
                         <span></span>
                         <label>Noise level</label>
@@ -23,7 +44,10 @@ function Upload(){
                     <div className='input-field'>
                         <input 
                             type='text' required
-                            name='time-length'
+                            value={userdata.timelength}
+                            onChange={(e) => setUserData(prevState => ({
+                                ...prevState, timelength: e.target.value
+                            }))}
                         />
                         <span></span>
                         <label>Time length</label>
@@ -31,7 +55,10 @@ function Upload(){
                     <div className='input-field'>
                         <input 
                             type='text' required
-                            name='pleasantness'
+                            value={userdata.pleasantness}
+                            onChange={(e) => setUserData(prevState => ({
+                                ...prevState, pleasantness: e.target.value
+                            }))}
                         />
                         <span></span>
                         <label>Pleasantness</label>
@@ -39,7 +66,10 @@ function Upload(){
                     <div className='input-field'>
                         <input 
                             type='text' required
-                            name='noise-type'
+                            value={userdata.noise_type}
+                            onChange={(e) => setUserData(prevState => ({
+                                ...prevState, noise_type: e.target.value
+                            }))}
                         />
                         <span></span>
                         <label>Noise type</label>
