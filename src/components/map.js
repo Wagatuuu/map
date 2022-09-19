@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { MapContainer, TileLayer, Marker} from 'react-leaflet';
+import {Link} from 'react-router-dom';
 
 function Map(){
 
@@ -70,6 +71,7 @@ function Map(){
                 <h1>NoiseCapture</h1>
                 <div className='acc'>
                     <h2>Georgeey</h2>
+                    <Link to='/upload' style={{textDecoration: 'none'}}><h3>Upload Data</h3></Link>
                 </div>
             </div>
 

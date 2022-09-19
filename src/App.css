@@ -6,6 +6,26 @@
   border-bottom: 1px solid #F9F9F9;
 }
 
+.acc{
+  display: flex;
+  align-items: center;
+}
+
+.acc h3{
+  margin-left: 30px;
+  border: 1px solid skyblue;
+  padding: 6px 10px;
+  border-radius: 5px;
+  background-color: #F9F9F9;
+  cursor: pointer;
+  color: #1d1d1d;
+}
+
+.acc h3:hover{
+  background-color: skyblue;
+  color: white;
+}
+
 .nav h1{
   color: skyblue;
 }
