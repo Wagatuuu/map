@@ -13,7 +13,20 @@ function Upload(){
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(userdata)
-        window.location.reload()
+        fetch('http://127.0.0.1:8000/upload', {
+            method: 'POST',
+            headers: {
+                'Content-Type' : 'application/json',
+                'Authorization': `Token ${localStorage.getItem('token')}`
+            },
+            body: JSON.stringify(userdata)
+        }).then(
+            alert('Thank you for your feedback')
+        ).then(
+            window.location.reload()
+        ).catch(
+            err => console.log(err)
+        )
     };
 
     return (
