@@ -11,7 +11,7 @@ function Map(){
 
     useEffect(() => {
         async function fetchData(){
-            const data = await fetch('http://127.0.0.1:8000/info', {
+            const data = await fetch('https://noisecapture.herokuapp.com/info', {
                 method: 'GET',
                 headers: {'Content-Type': 'application/json'}
             })
