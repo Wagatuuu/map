@@ -14,7 +14,7 @@ class Login extends Component{
 
     submit = (e) => {
         e.preventDefault()
-        fetch('http://127.0.0.1:8000/login',{
+        fetch('https://noisecapture.herokuapp.com/login',{
             method: 'POST',
             headers: {'Content-Type' : 'application/json'},
             body: JSON.stringify(this.state.credentials)

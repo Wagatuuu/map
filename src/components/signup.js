@@ -26,7 +26,7 @@ class Signup extends Component{
     submit = (e) => {
         e.preventDefault();
         console.log(this.state.details);
-        fetch('http://127.0.0.1:8000/register', {
+        fetch('https://noisecapture.herokuapp.com/register', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(this.state.details)
@@ -36,7 +36,7 @@ class Signup extends Component{
             }
         ).then(
             async () => {
-                await fetch('http://127.0.0.1:8000/login', {
+                await fetch('https://noisecapture.herokuapp.com/login', {
                     method: 'POST',
                     headers: {'Content-Type' : 'application/json'},
                     body: JSON.stringify(this.state.credentials)

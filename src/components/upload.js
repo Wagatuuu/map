@@ -13,7 +13,7 @@ function Upload(){
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(userdata)
-        fetch('http://127.0.0.1:8000/upload', {
+        fetch('https://noisecapture.herokuapp.com/upload', {
             method: 'POST',
             headers: {
                 'Content-Type' : 'application/json',
