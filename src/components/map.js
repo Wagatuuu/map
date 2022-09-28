@@ -70,7 +70,7 @@ function Map(){
     return(
         <>
             <div className='nav'>
-                <h1>NoiseCapture</h1>
+                <h1>Noise Screening Lite.</h1>
                 <div className='acc'>
                     <h2>Georgeey</h2>
                     <h3 onClick={() => setOpen(!open)}>Upload Data</h3>
