@@ -8,16 +8,28 @@ function Map(){
     const [location, setLocation] = useState('');
     const [noiseinfo, setNoiseinfo] = useState([]);
     const [open, setOpen] = useState(false);
+    const [user, setUser] = useState([])
 
     useEffect(() => {
         async function fetchData(){
             const data = await fetch('https://noisecapture.herokuapp.com/info', {
                 method: 'GET',
                 headers: {'Content-Type': 'application/json'}
-            })
+            });
+
+            const userdata = await fetch('https://noisecapture.herokuapp.com/cur', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Token ${localStorage.getItem('token')}`
+                }
+            });
 
             const res = await data.json()
             setNoiseinfo(res)
+
+            const user_res = await userdata.json()
+            setUser(user_res)
         }
         fetchData()
     },[]);
@@ -65,14 +77,16 @@ function Map(){
             </ul>
             ))
         )
-    }
+    };
+
+    const username = user.map(user => user.username);
 
     return(
         <>
             <div className='nav'>
                 <h1>Noise Screening Lite.</h1>
                 <div className='acc'>
-                    <h2>Georgeey</h2>
+                    <h2>{username[0]}</h2>
                     <h3 onClick={() => setOpen(!open)}>Upload Data</h3>
                 </div>
             </div>
