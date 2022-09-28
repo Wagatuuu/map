@@ -40,6 +40,13 @@ body{
   justify-content: space-between;
 }
 
+
+@media all and (max-width: 480px) { 
+  .map{
+    display: block;
+  }
+}
+
 .map .data{
   margin-left: 40px;
   display: flex;
