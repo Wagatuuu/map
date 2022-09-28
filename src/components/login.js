@@ -23,9 +23,8 @@ class Login extends Component{
                 console.log(res)
                 res.json().then(data => {
                     if(data.token){
-                        localStorage.setItem('token', data.token).then(
-                            this.setState({redirect: true})
-                        )
+                        localStorage.setItem('token', data.token)
+                        this.setState({redirect: true})
                     }
                     if(!data.token){
                         alert('Invalid credentials')

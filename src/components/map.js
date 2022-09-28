@@ -1,14 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import { MapContainer, TileLayer, Marker} from 'react-leaflet';
-import {useNavigate} from 'react-router-dom';
 import {Modal} from '@mui/material';
 import Upload from './upload';
 
-const token = localStorage.getItem('token');
-
 function Map(){
-
-    let navigate = useNavigate();
 
     const [location, setLocation] = useState('');
     const [noiseinfo, setNoiseinfo] = useState([]);
@@ -26,10 +21,6 @@ function Map(){
         }
         fetchData()
     },[]);
-
-    if(!token){
-        return navigate('/', {replace: true})
-    };
 
     const place = noiseinfo.find(data => {
         return data.place === location
