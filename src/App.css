@@ -213,3 +213,39 @@ form .input-field {
 .signup-link a:hover{
   text-decoration: underline;
 }
+
+/* Home */
+
+.nav h2{
+  color: #fff;
+  border: 1px solid #ddd;
+  padding: 8px 10px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.home{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.home h3{
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.home p{
+  color: #ddd;
+  line-height: 25px;
+}
+
+.footer{
+  position: absolute;
+  left: 50%;
+  top: 95%;
+  transform: translate(-50%, -90%);
+}
