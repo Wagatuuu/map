@@ -12,7 +12,7 @@ export default function Home(){
             </div>
             <div className='home'>
                 <h3>Explore Noise Maps</h3>
-                <p>Your No.1 stop for screening Noise data. Feel free to contribute by uploading noise data of your area</p>
+                <p>Your No.1 stop for screening Noise data. Feel free to contribute by uploading noise data of your area.</p>
             </div>
             <div className='footer'>
                 @2022, Wagatu Ian - All rights reserved
