@@ -14,7 +14,7 @@ class Login extends Component{
 
     submit = (e) => {
         e.preventDefault()
-        fetch('https://noisecapture.herokuapp.com/login',{
+        fetch('https://map-q4g5zxi70-wagatu.vercel.app/login',{
             method: 'POST',
             headers: {'Content-Type' : 'application/json'},
             body: JSON.stringify(this.state.credentials)

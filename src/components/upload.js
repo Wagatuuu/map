@@ -13,7 +13,7 @@ function Upload(){
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(userdata)
-        fetch('https://noisecapture.herokuapp.com/upload', {
+        fetch('https://map-q4g5zxi70-wagatu.vercel.app/upload', {
             method: 'POST',
             headers: {
                 'Content-Type' : 'application/json',

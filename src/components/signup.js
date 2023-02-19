@@ -26,7 +26,7 @@ class Signup extends Component{
     submit = (e) => {
         e.preventDefault();
         console.log(this.state.details);
-        fetch('https://noisecapture.herokuapp.com/register', {
+        fetch('https://map-q4g5zxi70-wagatu.vercel.app/register', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(this.state.details)
@@ -36,7 +36,7 @@ class Signup extends Component{
             }
         ).then(
             async () => {
-                await fetch('https://noisecapture.herokuapp.com/login', {
+                await fetch('https://map-q4g5zxi70-wagatu.vercel.app/login', {
                     method: 'POST',
                     headers: {'Content-Type' : 'application/json'},
                     body: JSON.stringify(this.state.credentials)

@@ -12,12 +12,12 @@ function Map(){
 
     useEffect(() => {
         async function fetchData(){
-            const data = await fetch('https://noisecapture.herokuapp.com/info', {
+            const data = await fetch('https://map-q4g5zxi70-wagatu.vercel.app/info', {
                 method: 'GET',
                 headers: {'Content-Type': 'application/json'}
             });
 
-            const userdata = await fetch('https://noisecapture.herokuapp.com/cur', {
+            const userdata = await fetch('https://map-q4g5zxi70-wagatu.vercel.app/cur', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
