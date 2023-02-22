@@ -103,15 +103,11 @@ function Map(){
                     <div className='location'>
                         <h5>Choose location:</h5>
                         <ul>
-                            <button onClick={() => setLocation('Kenya_Nairobi_Dagoretti North')}>Dagoretti North</button>
-                            <button onClick={() => setLocation('Kenya_Nairobi_Embakasi East')}>Embakasi East</button>
-                            <button onClick={() => setLocation('Kenya_Nairobi_Kibra')}>Kibra</button>
-                            <button onClick={() => setLocation('Kenya_Nairobi_Starehe')}>Starehe</button>
-                            <button onClick={() => setLocation('Kenya_Nairobi_Kasarani')}>Kasarani</button>
-                            <button onClick={() => setLocation('Kenya_Nairobi_Embakasi West')}>Embakasi West</button>
-                            <button onClick={() => setLocation('Kenya_Nairobi_Langata')}>Langata</button>
-                            <button onClick={() => setLocation('Kenya_Nairobi_Roysambu')}>Roysambu</button>
-                            <button onClick={() => setLocation('Kenya_Nairobi_Westlands')}>Westlands</button>
+                            <button onClick={() => setLocation('CBD')}>CBD</button>
+                            <button onClick={() => setLocation('Roysambu')}>Roysambu</button>
+                            <button onClick={() => setLocation('Westlands')}>Westlands</button>
+                            <button onClick={() => setLocation('Nairobi West')}>Nairobi West</button>
+                            <button onClick={() => setLocation('Langata')}>Langata</button>
                         </ul>
                     </div>
 
